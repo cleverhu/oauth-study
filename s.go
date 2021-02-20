@@ -57,7 +57,7 @@ func main() {
 		}
 		if c.Request.Method=="POST"{
 			uname,upass:=c.PostForm("userName"),c.PostForm("userPass")
-			if uname+upass=="shenyi123"{
+			if uname+upass=="admin123"{
 				utils.SaveUserSession(c,uname)
 				c.Redirect(302,"/auth?"+c.Request.URL.RawQuery)
 				return
